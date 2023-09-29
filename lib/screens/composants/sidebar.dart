@@ -38,26 +38,30 @@ class _SideBarState extends State<SideBar> {
             decoration: BoxDecoration(color: dredColor),
             accountName: isConnected
                 ? Text(
-                    authentication.currentUser!.displayName!,
+                    authentication.currentUser!.displayName ?? "",
                     style: police.copyWith(
                       fontWeight: FontWeight.w700,
                     ),
                   )
                 : Text("Veillez vous connecter",
                     style: police.copyWith(fontWeight: FontWeight.bold)),
-            accountEmail:
-                !isConnected ? null : Text(authentication.currentUser!.email!),
+            accountEmail: !isConnected
+                ? null
+                : Text(authentication.currentUser!.email ?? ""),
 
             currentAccountPicture: CircleAvatar(
               radius: 70,
               child: ClipOval(
-                child: CachedNetworkImage(
-                  imageUrl:
-                      'https://png.pngtree.com/png-clipart/20190924/original/pngtree-business-people-avatar-icon-user-profile-free-vector-png-image_4815126.jpg',
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                  height: 90,
-                ),
+                child: authentication.currentUser!.photoURL != null
+                    ? Image.asset(authentication.currentUser!.photoURL!)
+                    : Image.asset("images/user.png"),
+                // child: CachedNetworkImage(
+                //   imageUrl:
+                //       'https://png.pngtree.com/png-clipart/20190924/original/pngtree-business-people-avatar-icon-user-profile-free-vector-png-image_4815126.jpg',
+                //   fit: BoxFit.cover,
+                //   width: double.infinity,
+                //   height: 90,
+                // ),
               ),
             ),
             // decoration: const BoxDecoration(

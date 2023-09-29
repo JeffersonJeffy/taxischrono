@@ -143,6 +143,7 @@ class _OtpPageState extends State<OtpPage> {
                                     //     (route) => false);
                                   } catch (e) {
                                     debugPrint(e.toString());
+                                    print("error update data $e");
                                     loader = false;
                                     setState(() {});
                                     toaster(

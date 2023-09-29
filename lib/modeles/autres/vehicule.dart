@@ -107,11 +107,22 @@ class Vehicule {
         return null;
       });
 
+  // static Future<List<Vehicule?>> vehiculRequette() =>
+  //     datatbase.ref("Vehicules").get().then((event) {
+  //       return event.children.map((vehi) {
+  //         try {
+  //           return Vehicule.froJson(vehi.value);
+  //         } catch (e) {
+  //           return null;
+  //         }
+  //       }).toList();
+  //     });
+
   static Future<List<Vehicule?>> vehiculRequette() =>
-      datatbase.ref("Vehicules").get().then((event) {
-        return event.children.map((vehi) {
+      firestore.collection("cars").get().then((event) {
+        return event.docs.map((vehi) {
           try {
-            return Vehicule.froJson(vehi.value);
+            return Vehicule.froJson(vehi.data());
           } catch (e) {
             return null;
           }

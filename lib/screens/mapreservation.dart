@@ -128,6 +128,27 @@ class _MapReservationState extends State<MapReservation> {
                             ),
                             RequestCard(reservation: widget.reservation),
                             spacerHeight(10),
+                            // boutonText(
+                            //     action: () {
+                            //       // Vehicule.vehiculRequette();
+                            //       firestore
+                            //           .collection("cars")
+                            //           .get()
+                            //           .then((event) {
+                            //         return event.docs.map((vehi) {
+                            //           try {
+                            //             print(
+                            //                 "ttttttttttttt  ${Vehicule.froJson(vehi.data())}");
+                            //             return Vehicule.froJson(vehi.data());
+                            //           } catch (e) {
+                            //             return null;
+                            //           }
+                            //         }).toList();
+                            //       });
+                            //     },
+                            //     text: "dd",
+                            //     context: context,
+                            //     couleur: Colors.brown),
                             boutonText(
                                 context: context,
                                 couleur: Colors.green,
@@ -330,7 +351,8 @@ class _MapReservationState extends State<MapReservation> {
 //finction d'envoi de la requette
 
   envoieLarequette() async {
-    await Client.ticketCount(authentication.currentUser!.uid).then((value) {
+    await Client.ticketCount(authentication.currentUser!.uid)
+        .then((value) async {
       if (value <= 0) {
         setState(() {
           loader = false;
@@ -514,5 +536,4 @@ class _MapReservationState extends State<MapReservation> {
 
 //////////////////////////////////////////////////////////
   // fin de la fontion principale
-
 }

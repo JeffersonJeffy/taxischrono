@@ -145,7 +145,7 @@ class _PackState extends State<PackageUi> {
                                 //     ));
                                 toaster(
                                     message:
-                                        "Paiement en cour de traitement\nConfirmez la transaction en tapant votre code secret",
+                                        "Paiement en cour de traitement\nConfirmez la transaction en tapant votre code secret. Ou Taper #150*50# pour valider la transaction",
                                     color: Colors.blueAccent,
                                     long: true);
                                 var counta = 0;

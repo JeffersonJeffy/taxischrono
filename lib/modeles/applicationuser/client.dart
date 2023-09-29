@@ -113,7 +113,7 @@ class Client {
     await authentication.signInWithCredential(credential).then((value) async {
       if (value.user != null) {
         chauffeurOtp.userid = value.user!.uid;
-        await value.user!.updateEmail(chauffeurOtp.userEmail);
+        await value.user!.updateEmail(chauffeurOtp.userEmail.toString().trim());
         await value.user!.updateDisplayName(chauffeurOtp.userName);
         await value.user!.updatePassword(chauffeurOtp.motDePasse!);
         await chauffeurOtp.saveUser().then((val) async {

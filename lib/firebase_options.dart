@@ -53,12 +53,22 @@ class DefaultFirebaseOptions {
     measurementId: 'G-PVGRBTMHNF',
   );
 
+// old
+  // static const FirebaseOptions android = FirebaseOptions(
+  //   apiKey: 'AIzaSyBVYyZjeyE7UmSJQTSVqkVnYvk_QfGW9sg',
+  //   appId: '1:388406613111:android:3104c566d967dbf662a272',
+  //   messagingSenderId: '388406613111',
+  //   projectId: 'taxischrono-c12c9',
+  //   storageBucket: 'taxischrono-c12c9.appspot.com',
+  // );
+
+// new
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBVYyZjeyE7UmSJQTSVqkVnYvk_QfGW9sg',
-    appId: '1:388406613111:android:3104c566d967dbf662a272',
-    messagingSenderId: '388406613111',
-    projectId: 'taxischrono-c12c9',
-    storageBucket: 'taxischrono-c12c9.appspot.com',
+    apiKey: 'AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4',
+    appId: '1:255452747282:android:d41c22394e02dcdb99eacb',
+    messagingSenderId: '255452747282',
+    projectId: 'taxi-chrono-firebase',
+    storageBucket: 'taxi-chrono-firebase.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -67,8 +77,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '388406613111',
     projectId: 'taxischrono-c12c9',
     storageBucket: 'taxischrono-c12c9.appspot.com',
-    androidClientId: '388406613111-4ama9814rmq80k2ikfg1is3dl8pqd4sa.apps.googleusercontent.com',
-    iosClientId: '388406613111-grs0geujeucqj4d4acpqk8k02f9qbvju.apps.googleusercontent.com',
+    androidClientId:
+        '388406613111-4ama9814rmq80k2ikfg1is3dl8pqd4sa.apps.googleusercontent.com',
+    iosClientId:
+        '388406613111-grs0geujeucqj4d4acpqk8k02f9qbvju.apps.googleusercontent.com',
     iosBundleId: 'com.incc.taxischrono.app',
   );
 
@@ -78,8 +90,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '388406613111',
     projectId: 'taxischrono-c12c9',
     storageBucket: 'taxischrono-c12c9.appspot.com',
-    androidClientId: '388406613111-4ama9814rmq80k2ikfg1is3dl8pqd4sa.apps.googleusercontent.com',
-    iosClientId: '388406613111-grs0geujeucqj4d4acpqk8k02f9qbvju.apps.googleusercontent.com',
+    androidClientId:
+        '388406613111-4ama9814rmq80k2ikfg1is3dl8pqd4sa.apps.googleusercontent.com',
+    iosClientId:
+        '388406613111-grs0geujeucqj4d4acpqk8k02f9qbvju.apps.googleusercontent.com',
     iosBundleId: 'com.incc.taxischrono.app',
   );
 }
